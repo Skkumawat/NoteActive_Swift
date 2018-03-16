@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A89CAC9F27C33F8EA940F7BA /* Pods_NoteActive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 978A6C386EE281138EA107DF /* Pods_NoteActive.framework */; };
 		F414E958205A7538007660BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F414E957205A7538007660BD /* AppDelegate.swift */; };
 		F414E95A205A7538007660BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F414E959205A7538007660BD /* ViewController.swift */; };
 		F414E95D205A7538007660BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F414E95B205A7538007660BD /* Main.storyboard */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		978A6C386EE281138EA107DF /* Pods_NoteActive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NoteActive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC6322E697D9310EAC3E1DE9 /* Pods-NoteActive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoteActive.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NoteActive/Pods-NoteActive.debug.xcconfig"; sourceTree = "<group>"; };
+		DA57EA3714494145533FF486 /* Pods-NoteActive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoteActive.release.xcconfig"; path = "Pods/Target Support Files/Pods-NoteActive/Pods-NoteActive.release.xcconfig"; sourceTree = "<group>"; };
 		F414E954205A7538007660BD /* NoteActive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoteActive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F414E957205A7538007660BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F414E959205A7538007660BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -31,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A89CAC9F27C33F8EA940F7BA /* Pods_NoteActive.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D43275AF613B2419594CB598 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AC6322E697D9310EAC3E1DE9 /* Pods-NoteActive.debug.xcconfig */,
+				DA57EA3714494145533FF486 /* Pods-NoteActive.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D5918FFA660B95B301121529 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				978A6C386EE281138EA107DF /* Pods_NoteActive.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F414E94B205A7537007660BD = {
 			isa = PBXGroup;
 			children = (
 				F414E956205A7538007660BD /* NoteActive */,
 				F414E955205A7538007660BD /* Products */,
+				D43275AF613B2419594CB598 /* Pods */,
+				D5918FFA660B95B301121529 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F414E969205A7538007660BD /* Build configuration list for PBXNativeTarget "NoteActive" */;
 			buildPhases = (
+				42C947CCC6CF4D384B734FB5 /* [CP] Check Pods Manifest.lock */,
 				F414E950205A7538007660BD /* Sources */,
 				F414E951205A7538007660BD /* Frameworks */,
 				F414E952205A7538007660BD /* Resources */,
+				F822921A2AFD09333ACF994D /* [CP] Embed Pods Frameworks */,
+				FC331F80D07070C64A0E98C2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -133,6 +160,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		42C947CCC6CF4D384B734FB5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F822921A2AFD09333ACF994D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NoteActive/Pods-NoteActive-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC331F80D07070C64A0E98C2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NoteActive/Pods-NoteActive-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F414E950205A7538007660BD /* Sources */ = {
@@ -276,6 +351,7 @@
 		};
 		F414E96A205A7538007660BD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC6322E697D9310EAC3E1DE9 /* Pods-NoteActive.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -294,6 +370,7 @@
 		};
 		F414E96B205A7538007660BD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA57EA3714494145533FF486 /* Pods-NoteActive.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
